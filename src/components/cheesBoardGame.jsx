@@ -5,7 +5,6 @@ import { defaultConfigChessBoard } from "../utils/defaultConfigChessBoard"
 export const ChessBoard = () => {
   const [config] = useState(defaultConfigChessBoard)
   const chessBoard = generateBoard()
-  console.log(chessBoard)
 
   return (
     <div>
