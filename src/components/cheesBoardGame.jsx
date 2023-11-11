@@ -1,29 +1,32 @@
-import React from "react"
+import React, { useState } from "react"
+import { generateBoard } from "../utils/generateBoard"
+import { defaultConfigChessBoard } from "../utils/defaultConfigChessBoard"
 
 export const ChessBoard = () => {
-  const verticalAxis = ["1", "2", "3", "4", "5", "6", "7", "8"]
-  const horizontalAxis = ["a", "b", "c", "d", "e", "f", "g", "h"]
-  const chessBoard = []
-
-  for (let i = 0; i < verticalAxis.length; i += 1) {
-    for (let j = 0; j < horizontalAxis.length; j += 1) {
-      chessBoard.push(`${verticalAxis[i]}${horizontalAxis[j]}`)
-    }
-  }
+  const [config] = useState(defaultConfigChessBoard)
+  const chessBoard = generateBoard()
+  console.log(chessBoard)
 
   return (
-    <div className="flex flex-wrap w-64 h-64">
-      {chessBoard.map((item, id) =>
-        id % 2 === 0 ? (
-          <div key={id} className="w-8 h-8 bg-white">
-            {item}
-          </div>
-        ) : (
-          <div key={id} className="w-8 h-8 bg-black">
-            {item}
-          </div>
-        )
-      )}
+    <div>
+      {chessBoard.map((line, lineIndex) => (
+        <div className="flex border" key={lineIndex}>
+          {line.map((square, elementOfLineIndex) => {
+            const lineIsPair = lineIndex % 2 === 0
+            const offset = lineIsPair ? 0 : 1
+            const isPair = (elementOfLineIndex + offset) % 2 === 0
+
+            return (
+              <div
+                className={`w-20 h-20 bg-${isPair ? "" : ""}`}
+                style={{ backgroundColor: isPair ? "#616198" : "" }}
+                key={`${square}-${lineIndex}`}>
+                {config[square]}
+              </div>
+            )
+          })}
+        </div>
+      ))}
     </div>
   )
 }
