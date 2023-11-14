@@ -5,6 +5,8 @@ export const generateBoard = () => {
   //   squares.map((squareNumber) => Number(`${line}${squareNumber}`))
   // )
   const board = lines.map(() => squares.map(() => Number(`0`)))
+
+  // Faut le supprimer à terme ce truc
   board[0][0] = "1"
 
   return board

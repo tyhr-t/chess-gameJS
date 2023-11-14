@@ -1,10 +1,14 @@
-import React, { useState } from "react"
+import { useState, useEffect } from "react"
 import { generateBoard } from "../utils/generateBoard"
 import Cell from "./Cell"
 
 export const ChessBoard = () => {
   const [chessBoard, setChessBoard] = useState(generateBoard())
-  const [selectedPawnState, setSelectedPawnState] = useState(null)
+  const [currentPawn, setCurrentPawn] = useState(null)
+
+  useEffect(() => {
+    console.log("selectedPawnState has changed : ", currentPawn)
+  }, [currentPawn])
 
   return (
     <div>
@@ -14,15 +18,16 @@ export const ChessBoard = () => {
             <Cell
               setChessBoard={setChessBoard}
               key={`${x}-${y}`}
-              setSelectedPawnState={setSelectedPawnState}
+              setCurrentPawn={setCurrentPawn}
               chessBoard={chessBoard}
               x={x}
               y={y}
+              currentPawn={currentPawn}
             />
           ))}
         </div>
       ))}
-      <p>le pion selectionner est : {selectedPawnState}</p>
+      <p>le pion selectionner est : {currentPawn?.value}</p>
     </div>
   )
 }
