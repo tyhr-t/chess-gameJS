@@ -2,7 +2,10 @@ const Cell = ({
   setCurrentPawn,
   currentPawn,
   chessBoard,
+  currentPlayer,
   x,
+  // setPossiblesMovements,
+  // possiblesMovements,
   y,
   setChessBoard
 }) => {
@@ -11,24 +14,28 @@ const Cell = ({
     const pawnValueX = e.target?.getAttribute("data-square-x")
     const pawnValueY = e.target?.getAttribute("data-square-y")
 
-    if (pawnValue === "1") {
+    console.log(e.target)
+
+    if (currentPlayer === "white") {
       const pawnInfo = {
         value: pawnValue,
         positionX: pawnValueX,
         positionY: pawnValueY
       }
+
       setCurrentPawn(pawnInfo)
-      console.log(currentPawn)
     }
 
     if (currentPawn) {
       setChessBoard((prev) => {
         const newChess = [...prev]
+
         newChess[pawnValueY][pawnValueX] = currentPawn.value
-        newChess[currentPawn.positionY][currentPawn.positionX] = 0
+        newChess[currentPawn.positionY][currentPawn.positionX] = ""
 
         return newChess
       })
+      setCurrentPawn(null)
     }
   }
   const lineIsPair = y % 2 === 0
@@ -40,18 +47,12 @@ const Cell = ({
       data-square-y={`${y}`}
       data-square-x={`${x}`}
       data-square-value={chessBoard[y][x]}
-      data-pawn-position={`${x}-${y}`}
       onClick={handleClickCell}
       className={`w-20 h-20 ${isBlack ? "bg-blue-300" : ""}`}>
-      <p>{`${chessBoard[y][x]}`}</p>
+      {`${chessBoard[y][x]}`}
       <br />
       {` ${x}, ${y}`}
     </div>
   )
 }
 export default Cell
-
-// 1 - Sélectioner un pion -> Si il fait partie de l'équipe du joueur en cours
-// 2 - Si un pion est sélectionné, afficher les déplacement possibles
-// 3 - Si une case des déplacements possibles est cliquée, déplacer le pion -> déselectionner le pion
-// 4 - Si tu reclique ton pion, ça le déselectionne

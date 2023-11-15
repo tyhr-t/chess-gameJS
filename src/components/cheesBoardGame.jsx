@@ -1,13 +1,22 @@
 import { useState, useEffect } from "react"
-import { generateBoard } from "../utils/generateBoard"
 import Cell from "./Cell"
+import { board } from "../utils/constant"
+import { calculateMovementPossible } from "../utils/calculateMovementPossible"
 
 export const ChessBoard = () => {
-  const [chessBoard, setChessBoard] = useState(generateBoard())
+  const [chessBoard, setChessBoard] = useState([...board])
   const [currentPawn, setCurrentPawn] = useState(null)
+  const [currentPlayer, setCurrentPlayer] = useState("white")
+  const [possiblesMovements, setPossiblesMovements] = useState([])
 
   useEffect(() => {
-    console.log("selectedPawnState has changed : ", currentPawn)
+    if (currentPawn !== null) {
+      console.log("selectedPawnState has changed : ", currentPawn)
+      // On peut savoir le type de pion
+      // En fonction du type de ce pion, on va calculer les mouvements possibles
+      const mouvements = calculateMovementPossible(currentPawn)
+      setPossiblesMovements(mouvements)
+    }
   }, [currentPawn])
 
   return (
@@ -16,6 +25,10 @@ export const ChessBoard = () => {
         <div className="flex border" key={y}>
           {line.map((square, x) => (
             <Cell
+              possiblesMovements={possiblesMovements}
+              setPossiblesMovements={setPossiblesMovements}
+              currentPlayer={currentPlayer}
+              setCurrentPlayer={setCurrentPlayer}
               setChessBoard={setChessBoard}
               key={`${x}-${y}`}
               setCurrentPawn={setCurrentPawn}
@@ -27,7 +40,7 @@ export const ChessBoard = () => {
           ))}
         </div>
       ))}
-      <p>le pion selectionner est : {currentPawn?.value}</p>
+      <p>le pion selectionner est : {JSON.stringify(currentPawn)}</p>
     </div>
   )
 }
