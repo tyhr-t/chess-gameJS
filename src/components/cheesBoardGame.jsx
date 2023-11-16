@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import Cell from "./Cell"
 import { board } from "../utils/constant"
-import { calculateMovementPossible } from "../utils/calculateMovementPossible"
+import { calculateMovementPossible } from "../utils/movements/calculateMovementPossible"
 
 export const ChessBoard = () => {
   const [chessBoard, setChessBoard] = useState([...board])

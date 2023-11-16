@@ -1,11 +1,11 @@
-import movmentBehavior from "./movementBehavior"
+import movementBehavior from "./movementBehavior"
 export const calculateMovementPossible = (
   currentPawn,
   currentPlayer,
   board
 ) => {
   const currentPawnToLowerCase = currentPawn.value.toLowerCase()
-  const movements = movmentBehavior[currentPawnToLowerCase](
+  const movements = movementBehavior[currentPawnToLowerCase](
     currentPawn,
     currentPlayer,
     board
