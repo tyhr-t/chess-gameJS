@@ -14,8 +14,6 @@ const Cell = ({
     const cellX = e.target?.getAttribute("data-square-x")
     const cellY = e.target?.getAttribute("data-square-y")
 
-    console.log(e.target)
-
     if (clickedCellValue && currentPlayer === "white") {
       const pawnInfo = {
         value: clickedCellValue,

@@ -11,13 +11,24 @@ export const ChessBoard = () => {
 
   useEffect(() => {
     if (currentPawn !== null) {
-      console.log("selectedPawnState has changed : ", currentPawn)
+      // console.log("selectedPawnState has changed : ", currentPawn)
       // On peut savoir le type de pion
       // En fonction du type de ce pion, on va calculer les mouvements possibles
-      const mouvements = calculateMovementPossible(currentPawn)
+      const mouvements = calculateMovementPossible(
+        currentPawn,
+        currentPlayer,
+        chessBoard
+      )
       setPossiblesMovements(mouvements)
     }
   }, [currentPawn])
+
+  useEffect(() => {
+    console.log(
+      "le pion a change donc de nouveau mov sont dispo la lieste est : ",
+      possiblesMovements
+    )
+  }, [possiblesMovements])
 
   return (
     <div>

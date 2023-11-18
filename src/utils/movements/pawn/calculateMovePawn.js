@@ -1,12 +1,20 @@
-export const calculateMovePawn = (currentPawn /*currentPlayer, board*/) => {
-  const pawnForwardCurrentPawn = currentPawn.positionX + 1
-  console.log(pawnForwardCurrentPawn)
+import { calculatePawnForward } from "./calculatePawnForward"
+import { calculatePawnDoubleJump } from "./calculatePawnDoubleJump"
 
-  if (pawnForwardCurrentPawn.value && currentPawn) {
-    console.log("tu as la possibilité davancer")
-  }
+export const calculateMovePawn = (currentPawn, currentPlayer, board) => {
+  const moves = []
+  const { positionX, positionY } = currentPawn
+  const checkIfPawnForward = Boolean(board[positionY - 1][positionX])
+  const checkIfPawnForwardTwoCaseAfter = Boolean(
+    board[positionY - 2][positionX]
+  )
 
-  console.log(currentPawn.value)
+  calculatePawnForward(currentPawn, checkIfPawnForward, moves)
+  calculatePawnDoubleJump(
+    currentPawn,
+    { checkIfPawnForwardTwoCaseAfter, checkIfPawnForward },
+    moves
+  )
 
-  return currentPawn.value
+  return moves
 }
