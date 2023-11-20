@@ -12,14 +12,14 @@ export const ChessBoard = () => {
   useEffect(() => {
     if (currentPawn !== null) {
       // console.log("selectedPawnState has changed : ", currentPawn)
-      // On peut savoir le type de pion
-      // En fonction du type de ce pion, on va calculer les mouvements possibles
       const mouvements = calculateMovementPossible(
         currentPawn,
         currentPlayer,
         chessBoard
       )
       setPossiblesMovements(mouvements)
+    } else {
+      setPossiblesMovements([])
     }
   }, [currentPawn])
 
@@ -51,6 +51,7 @@ export const ChessBoard = () => {
           ))}
         </div>
       ))}
+      <p>le joueur {currentPlayer} doit jouer allez joue !</p>
       <p>le pion selectionner est : {JSON.stringify(currentPawn)}</p>
     </div>
   )

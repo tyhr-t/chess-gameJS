@@ -1,6 +1,6 @@
 export const calculatePawnDoubleJump = (currentPawn, checks, moves) => {
   if (
-    currentPawn.positionY === "6" &&
+    currentPawn.positionY === 6 &&
     !checks.checkIfPawnForward &&
     !checks.checkIfPawnForwardTwoCaseAfter
   ) {
