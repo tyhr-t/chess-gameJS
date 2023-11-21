@@ -4,7 +4,9 @@ export const calculateMovementPossible = (
   currentPlayer,
   board
 ) => {
+  console.log("before", currentPawn, currentPlayer, board)
   const currentPawnToLowerCase = currentPawn.value.toLowerCase()
+  console.log("after", currentPawnToLowerCase)
   const movements = movementBehavior[currentPawnToLowerCase](
     currentPawn,
     currentPlayer,

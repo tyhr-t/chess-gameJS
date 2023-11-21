@@ -1,12 +1,6 @@
-export const calculatePawnForward = (
-  currentPawn,
-  checkIfPawnForward,
-  moves
-) => {
-  if (!checkIfPawnForward) {
-    moves.push({
-      positionY: currentPawn.positionY - 1,
-      positionX: Number(currentPawn.positionX)
-    })
-  }
+export const calculatePawnForward = (currentPawn, direction, board) => {
+  const x = currentPawn.PositionX
+  const y = currentPawn.PositionY + 1 * Number(direction)
+
+  return board[y][x] === ""
 }

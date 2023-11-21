@@ -1,7 +1,11 @@
 export const getPieceColor = (cellValue) => {
-  if (cellValue === cellValue.toLowerCase()) {
-    return "black"
+  if (cellValue !== null) {
+    if (cellValue === cellValue.toLowerCase()) {
+      return "black"
+    }
+
+    return "white"
   }
 
-  return "white"
+  return null
 }
