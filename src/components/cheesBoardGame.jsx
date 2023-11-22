@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import Cell from "./Cell"
-import { board } from "../utils/constant"
+import { board } from "../utils/constant/constant"
 import { calculateMovementPossible } from "../utils/movements/calculateMovementPossible"
 
 export const ChessBoard = () => {

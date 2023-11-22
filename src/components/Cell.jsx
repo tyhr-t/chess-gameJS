@@ -15,12 +15,14 @@ const Cell = ({
 }) => {
   const handleClickCell = () => {
     const clickedCellValue = chessBoard[y][x]
+    const colorOfPiece = getPieceColor(clickedCellValue)
 
-    if (clickedCellValue && currentPlayer === getPieceColor(clickedCellValue)) {
+    if (clickedCellValue && currentPlayer === colorOfPiece) {
       const pawnInfo = {
         value: clickedCellValue,
         positionX: x,
-        positionY: y
+        positionY: y,
+        color: colorOfPiece
       }
       setCurrentPawn(pawnInfo)
     }
@@ -40,7 +42,6 @@ const Cell = ({
   const lineIsPair = y % 2 === 0
   const offset = lineIsPair ? 0 : 1
   const isBlack = (x + offset) % 2 === 0
-  console.log("render", x, y, possiblesMovements)
   const isPossibleToMoveHere = checkPossibleToMoveHere(x, y, possiblesMovements)
 
   return (

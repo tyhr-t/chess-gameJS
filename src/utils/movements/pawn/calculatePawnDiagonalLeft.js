@@ -1,7 +1,19 @@
 import { getPieceColor } from "../../_players/getPieceColor"
-export const calculatePawnDiagonalLeft = (currentPawn, direction, board) => {
-  const x = currentPawn.PositionX - 1
-  const y = currentPawn.PositionY + 1 * Number(direction)
+import { isInBoard } from "../../cells/isInBoard"
+export const calculatePawnDiagonalLeft = (currentPawn, moves, board) => {
+  const positionX = currentPawn.positionX - 1
+  const positionY = currentPawn.positionY + 1 * Number(currentPawn.direction)
+  const possibleMovementPosition = {
+    positionX,
+    positionY
+  }
 
-  return getPieceColor(currentPawn.value) !== getPieceColor(board[y][x])
+  if (isInBoard(possibleMovementPosition)) {
+    const pieceColor = getPieceColor(board[positionY][positionX])
+
+    if (pieceColor !== currentPawn.color && pieceColor !== null) {
+      console.log(pieceColor)
+      moves.push(possibleMovementPosition)
+    }
+  }
 }
