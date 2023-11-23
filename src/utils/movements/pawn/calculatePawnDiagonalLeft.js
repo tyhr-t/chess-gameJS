@@ -12,7 +12,6 @@ export const calculatePawnDiagonalLeft = (currentPawn, moves, board) => {
     const pieceColor = getPieceColor(board[positionY][positionX])
 
     if (pieceColor !== currentPawn.color && pieceColor !== null) {
-      console.log(pieceColor)
       moves.push(possibleMovementPosition)
     }
   }
