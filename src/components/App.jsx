@@ -1,9 +1,10 @@
 import { ChessBoard } from "./cheesBoardGame"
+import Navbar from "./ui/Navbar"
 
 const App = () => (
-  <div className="h-screen bg-gradient-to-r from-gray-700 via-gray-900 to-black">
+  <div className="h-screen bg-gradient-to-r from-gray-100 to-gray-300">
+    <Navbar />
     <div className="h-screen flex flex-col justify-center items-center">
-      <div className="taskbar">Taskbar</div>
       <ChessBoard />
       <div className="footer">Footer</div>
     </div>

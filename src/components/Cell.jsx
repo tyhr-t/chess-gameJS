@@ -47,8 +47,8 @@ const Cell = ({
   return (
     <div
       onClick={handleClickCell}
-      className={`w-20 h-20 ${isBlack ? "bg-green-300" : "bg-white"} ${
-        isPossibleToMoveHere ? "border-2 border-red-600" : ""
+      className={`w-20 h-20 ${isBlack ? "bg-blue-500" : "bg-white"} ${
+        isPossibleToMoveHere ? "border-2 border-red-600 " : ""
       }`}>
       {`${chessBoard[y][x]}`}
       <br />
