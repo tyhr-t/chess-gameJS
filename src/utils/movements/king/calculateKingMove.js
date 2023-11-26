@@ -1,8 +1,9 @@
 import directionsIterators from "../../constant/directionsIterators"
 import { isInBoard } from "../../cells/isInBoard"
-export const calculateKingMove = (currentPawn /* , dep, board */) => {
+import { getPieceColor } from "../../_players/getPieceColor"
+export const calculateKingMove = (currentPawn, dep, board) => {
   const moves = []
-  const { positionX, positionY /*color*/ } = currentPawn
+  const { positionX, positionY } = currentPawn
 
   for (const direction of Object.keys(directionsIterators)) {
     const directionIterator = directionsIterators[direction]
@@ -12,10 +13,19 @@ export const calculateKingMove = (currentPawn /* , dep, board */) => {
     }
 
     if (isInBoard(laPositionAVerifier)) {
-      moves.push({
-        positionX: laPositionAVerifier.positionX,
-        positionY: laPositionAVerifier.positionY
-      })
+      laPositionAVerifier.color = getPieceColor(
+        board[positionY + directionIterator.y][positionX + directionIterator.x]
+      )
+
+      if (
+        !laPositionAVerifier.color ||
+        laPositionAVerifier.color !== currentPawn.color
+      ) {
+        moves.push({
+          positionX: laPositionAVerifier.positionX,
+          positionY: laPositionAVerifier.positionY
+        })
+      }
     }
   }
 

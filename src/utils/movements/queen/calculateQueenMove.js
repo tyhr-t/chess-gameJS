@@ -1,33 +1,34 @@
 import directionsIterators from "../../constant/directionsIterators"
 import { isInBoard } from "../../cells/isInBoard"
-export const calculateQueenMove = (currentPawn /* , dep, board */) => {
+import { getPieceColor } from "../../_players/getPieceColor"
+import { checkIsEnemy } from "../../cells/checkIsEnnemy"
+
+export const calculateQueenMove = (currentPawn, dep, board) => {
   const moves = []
-  const { positionX, positionY /*color*/ } = currentPawn
+  const { positionX: actualPositionX, positionY: actualPositionY } = currentPawn
 
   for (const direction of Object.keys(directionsIterators)) {
     const directionIterator = directionsIterators[direction]
-    const laPositionAVerifier = {
-      positionX: positionX + directionIterator.x,
-      positionY: positionY + directionIterator.y
-    }
+    let positionX = actualPositionX + directionIterator.x
+    let positionY = actualPositionY + directionIterator.y
 
-    while (isInBoard(laPositionAVerifier)) {
-      moves.push({
-        positionX: laPositionAVerifier.positionX,
-        positionY: laPositionAVerifier.positionY
-      })
+    while (isInBoard({ positionX, positionY })) {
+      const color = getPieceColor(board[positionY][positionX])
+
+      if (color === currentPawn.color) {
+        break
+      } else if (checkIsEnemy(currentPawn, color)) {
+        moves.push({ positionX, positionY })
+
+        break
+      } else {
+        moves.push({ positionX, positionY })
+      }
+
+      positionX += directionIterator.x
+      positionY += directionIterator.y
     }
   }
 
   return moves
 }
-
-// const monObjet = {
-//   az: "ehjfziuef",
-//   azd: "ehjfziuef",
-//   azdeee: "ehjfziuef"
-// }
-
-// for (const maClef of Object.keys(monObjet)) {
-//   const maValeur = monObjet[maClef]
-// }

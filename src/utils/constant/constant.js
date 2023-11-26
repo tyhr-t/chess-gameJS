@@ -1,12 +1,12 @@
 export const board = [
-  ["rook", "knight", "bishop", "queen", "king", "bishop", "knight", "rook"],
+  ["queen", "", "", "queen", "", "", "", "queen"],
   ["", "", "", "", "PAWN", "", "", ""],
   ["PAWN", "", "", "", "", "", "", "pawn"],
-  ["", "", "", "pawn", "", "", "", ""],
-  ["", "", "", "", "", "", "", ""],
+  ["", "PAWN", "", "", "", "", "pawn", ""],
+  ["", "", "", "", "KING", "", "", ""],
   ["PAWN", "", "", "", "", "", "", "pawn"],
   ["", "", "", "", "PAWN", "", "", ""],
-  ["ROOK", "KNIGHT", "BISHOP", "QUEEN", "KING", "BISHOP", "KNIGHT", "ROOK"]
+  ["QUEEN", "", "", "", "QUEEN", "", "", "QUEEN"]
 ]
 
 /**  
