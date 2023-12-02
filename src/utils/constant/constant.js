@@ -1,3 +1,5 @@
+import { getPiecesCount } from "../boardParsing/getPiecesCount"
+
 export const board = [
   ["rook", "knight", "bishop", "queen", "king", "bishop", "knight", "rook"],
   ["pawn", "pawn", "pawn", "pawn", "pawn", "pawn", "pawn", "pawn"],
@@ -8,6 +10,8 @@ export const board = [
   ["PAWN", "PAWN", "PAWN", "PAWN", "PAWN", "PAWN", "PAWN", "PAWN"],
   ["ROOK", "KNIGHT", "BISHOP", "QUEEN", "KING", "BISHOP", "KNIGHT", "ROOK"]
 ]
+
+export const boardPiecesCount = getPiecesCount(board)
 
 export const directionsIterators = {
   upLeft: { x: -1, y: -1 },
@@ -22,3 +26,13 @@ export const directionsIterators = {
 
 export const MAXIMAL_X_VALUE_ON_BOARD = 0
 export const MAXIMAL_Y_VALUE_ON_BOARD = 7
+
+export const piecesColors = {
+  white: "#B37B3C",
+  black: "#1F0900"
+}
+
+export const tileColors = {
+  white: "bg-[#FFFBDE]",
+  black: "bg-[#FFD4B9]"
+}

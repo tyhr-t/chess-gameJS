@@ -4,7 +4,10 @@ import { getPieceColor } from "../utils/_players/getPieceColor"
 import { handleSelection } from "../utils/_players/handleSelection"
 import { useContext } from "react"
 import { chessContext } from "./GameContextProvider"
+import { tileColors } from "../utils/constant/constant"
+import Piece from "./Piece"
 
+const { black, white } = tileColors
 const Cell = ({ x, y }) => {
   const {
     setCurrentPawn,
@@ -48,12 +51,10 @@ const Cell = ({ x, y }) => {
   return (
     <div
       onClick={handleClickCell}
-      className={`w-20 h-20 ${isBlack ? "bg-blue-500" : "bg-white"} ${
+      className={`w-20 h-20 ${isBlack ? black : white} ${
         isPossibleToMoveHere ? "border-2 border-red-600 " : ""
-      }`}>
-      {`${chessBoard[y][x]}`}
-      <br />
-      {` ${x}, ${y}`}
+      }  flex justify-center items-center `}>
+      <Piece typeOfPiece={chessBoard[y][x]} />
     </div>
   )
 }

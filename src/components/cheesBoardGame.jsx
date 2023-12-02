@@ -3,7 +3,8 @@ import Cell from "./Cell"
 import { chessContext } from "./GameContextProvider"
 
 export const ChessBoard = () => {
-  const { chessBoard, currentPawn, currentPlayer } = useContext(chessContext)
+  const { chessBoard, currentPawn, currentPlayer, hasGameStarted } =
+    useContext(chessContext)
 
   return (
     <div>
@@ -14,8 +15,20 @@ export const ChessBoard = () => {
           ))}
         </div>
       ))}
-      <p>le joueur {currentPlayer} doit jouer allez joue !</p>
-      <p>le pion selectionner est : {JSON.stringify(currentPawn)}</p>
+      {hasGameStarted ? (
+        <div className="  flex flex-col ">
+          <div className="text-2xl font-bold">
+            {`Current player : ${currentPlayer}`}
+          </div>
+          <div className="text-2xl font-bold">
+            {currentPawn
+              ? `Current pawn : ${currentPawn?.color} ${currentPawn?.value}`
+              : "No pawn selected"}
+          </div>
+        </div>
+      ) : (
+        <div className="text-2xl font-bold">{`Start the game`}</div>
+      )}
     </div>
   )
 }

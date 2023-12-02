@@ -6,7 +6,7 @@ const App = () => (
   <GameContextProvider>
     <div className="h-screen bg-gradient-to-r from-gray-100 to-gray-300">
       <Navbar />
-      <div className="h-screen flex flex-col justify-center items-center">
+      <div className="h-screen flex flex-col  items-center">
         <ChessBoard />
         <div className="footer">Footer</div>
       </div>

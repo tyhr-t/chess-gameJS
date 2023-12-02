@@ -3,14 +3,21 @@
 import { createContext, useState, useEffect } from "react"
 import { board } from "../utils/constant/constant"
 import { calculateMovementPossible } from "../utils/movements/calculateMovementPossible"
+import { getPiecesCount } from "../utils/boardParsing/getPiecesCount"
 
 export const chessContext = createContext()
 export const GameContextProvider = ({ children }) => {
   const [chessBoard, setChessBoard] = useState(structuredClone(board))
   const [currentPawn, setCurrentPawn] = useState(null)
-  const [currentPlayer, setCurrentPlayer] = useState("white")
+  const [currentPlayer, setCurrentPlayer] = useState("")
   const [possiblesMovements, setPossiblesMovements] = useState([])
   const [hasGameStarted, setHasGameStarted] = useState(false)
+  const [piecesCount, setPiecesCount] = useState(null)
+  const [savedStates, setSavedStates] = useState([chessBoard])
+
+  useEffect(() => {
+    setPiecesCount(getPiecesCount(chessBoard))
+  }, [chessBoard])
 
   useEffect(() => {
     if (currentPawn !== null) {
@@ -37,7 +44,8 @@ export const GameContextProvider = ({ children }) => {
         possiblesMovements,
         setPossiblesMovements,
         setHasGameStarted,
-        hasGameStarted
+        hasGameStarted,
+        piecesCount
       }}>
       {children}
     </chessContext.Provider>
