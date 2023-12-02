@@ -1,32 +1,27 @@
+import { directionsKnightIterators } from "../../constant/directionKnightIterators"
 import { isInBoard } from "../../cells/isInBoard"
 import { getPieceColor } from "../../_players/getPieceColor"
 import { checkIsEnemy } from "../../cells/checkIsEnnemy"
-import { directionsIterators } from "../../constant/constant"
 
-export const calculateQueenMove = (currentPawn, dep, board) => {
+export const calculateKnightMove = (currentPawn, dep, board) => {
   const moves = []
   const { positionX: actualPositionX, positionY: actualPositionY } = currentPawn
 
-  for (const direction of Object.keys(directionsIterators)) {
-    const directionIterator = directionsIterators[direction]
-    let positionX = actualPositionX + directionIterator.x
-    let positionY = actualPositionY + directionIterator.y
+  for (const direction of Object.keys(directionsKnightIterators)) {
+    const directionIterator = directionsKnightIterators[direction]
+    const positionX = actualPositionX + directionIterator.x
+    const positionY = actualPositionY + directionIterator.y
 
-    while (isInBoard({ positionX, positionY })) {
+    if (isInBoard({ positionX, positionY })) {
       const color = getPieceColor(board[positionY][positionX])
 
       if (color === currentPawn.color) {
-        break
+        continue
       } else if (checkIsEnemy(currentPawn, color)) {
         moves.push({ positionX, positionY })
-
-        break
       } else {
         moves.push({ positionX, positionY })
       }
-
-      positionX += directionIterator.x
-      positionY += directionIterator.y
     }
   }
 

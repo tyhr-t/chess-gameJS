@@ -1,7 +1,7 @@
-import directionsIterators from "../../constant/directionsIterators"
 import { isInBoard } from "../../cells/isInBoard"
 import { getPieceColor } from "../../_players/getPieceColor"
 import { checkIsEnemy } from "../../cells/checkIsEnnemy"
+import { directionsIterators } from "../../constant/constant"
 
 export const calculateMoveRook = (currentPawn, dep, board) => {
   const { up, left, down, right } = directionsIterators

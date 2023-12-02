@@ -1,0 +1,90 @@
+Date : 2023-11-28 09:12:17
+Directory : /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox
+Total : 39 files,  16938 codes, 22 comments, 107 blanks, all 17067 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| JSON               |          4 |     16,115 |          0 |          2 |     16,117 |
+| JavaScript         |         25 |        390 |         16 |         77 |        483 |
+| JSON with Comments |          2 |        257 |          3 |          3 |        263 |
+| JavaScript JSX     |          6 |        159 |          3 |         23 |        185 |
+| HTML               |          1 |         16 |          0 |          2 |         18 |
+| XML                |          1 |          1 |          0 |          0 |          1 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                             | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                |         39 |     16,938 |         22 |        107 |     17,067 |
+| . (Files)                                                                                                                        |          4 |     16,319 |          1 |          3 |     16,323 |
+| .codesandbox                                                                                                                     |          2 |         53 |          2 |          2 |         57 |
+| _trash                                                                                                                           |          3 |         73 |          8 |          5 |         86 |
+| public                                                                                                                           |          1 |         16 |          0 |          2 |         18 |
+| src                                                                                                                              |         29 |        477 |         11 |         95 |        583 |
+| src (Files)                                                                                                                      |          1 |          7 |          3 |          4 |         14 |
+| src/_PIECES                                                                                                                      |          1 |          1 |          0 |          0 |          1 |
+| src/components                                                                                                                   |          5 |        152 |          0 |         19 |        171 |
+| src/components (Files)                                                                                                           |          3 |        109 |          0 |         13 |        122 |
+| src/components/ui                                                                                                                |          2 |         43 |          0 |          6 |         49 |
+| src/utils                                                                                                                        |         22 |        317 |          8 |         72 |        397 |
+| src/utils/_players                                                                                                               |          3 |         23 |          0 |          7 |         30 |
+| src/utils/cells                                                                                                                  |          3 |         16 |          0 |          5 |         21 |
+| src/utils/constant                                                                                                               |          4 |         45 |          8 |          8 |         61 |
+| src/utils/movements                                                                                                              |         12 |        233 |          0 |         52 |        285 |
+| src/utils/movements (Files)                                                                                                      |          2 |         25 |          0 |          4 |         29 |
+| src/utils/movements/bishop                                                                                                       |          1 |         29 |          0 |          8 |         37 |
+| src/utils/movements/king                                                                                                         |          1 |         29 |          0 |          5 |         34 |
+| src/utils/movements/knight                                                                                                       |          1 |         24 |          0 |          6 |         30 |
+| src/utils/movements/pawn                                                                                                         |          5 |         70 |          0 |         13 |         83 |
+| src/utils/movements/queen                                                                                                        |          1 |         27 |          0 |          8 |         35 |
+| src/utils/movements/rook                                                                                                         |          1 |         29 |          0 |          8 |         37 |
++----------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                                                         | language           | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/.codesandbox/tasks.json                                | JSON with Comments |         33 |          2 |          2 |         37 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/.codesandbox/workspace.json                            | JSON               |         20 |          0 |          0 |         20 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/.eslintrc.json                                         | JSON with Comments |        224 |          1 |          1 |        226 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/.prettierrc                                            | JSON               |         12 |          0 |          0 |         12 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/_trash/defaultConfigChessBoard.js                      | JavaScript         |         66 |          0 |          1 |         67 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/_trash/generateBoard.js                                | JavaScript         |          7 |          4 |          3 |         14 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/_trash/movePawn.js                                     | JavaScript         |          0 |          4 |          1 |          5 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/package-lock.json                                      | JSON               |     16,045 |          0 |          1 |     16,046 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/package.json                                           | JSON               |         38 |          0 |          1 |         39 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/public/index.html                                      | HTML               |         16 |          0 |          2 |         18 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/_PIECES/pawn.svg                                   | XML                |          1 |          0 |          0 |          1 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/components/App.jsx                                 | JavaScript JSX     |         12 |          0 |          3 |         15 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/components/Cell.jsx                                | JavaScript JSX     |         50 |          0 |          6 |         56 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/components/cheesBoardGame.jsx                      | JavaScript JSX     |         47 |          0 |          4 |         51 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/components/ui/Button.jsx                           | JavaScript JSX     |          9 |          0 |          3 |         12 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/components/ui/Navbar.jsx                           | JavaScript JSX     |         34 |          0 |          3 |         37 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/index.jsx                                          | JavaScript JSX     |          7 |          3 |          4 |         14 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/_players/getOpositeColor.js                  | JavaScript         |          6 |          0 |          2 |          8 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/_players/getPieceColor.js                    | JavaScript         |          9 |          0 |          3 |         12 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/_players/handleSelection.js                  | JavaScript         |          8 |          0 |          2 |         10 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/cells/checkIsEnnemy.js                       | JavaScript         |          2 |          0 |          1 |          3 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/cells/checkPossibleToMoveHere.js             | JavaScript         |          9 |          0 |          3 |         12 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/cells/isInBoard.js                           | JavaScript         |          5 |          0 |          1 |          6 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/constant/constant.js                         | JavaScript         |         22 |          8 |          4 |         34 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/constant/directionKnightIterators.js         | JavaScript         |         10 |          0 |          1 |         11 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/constant/directionsIterators.js              | JavaScript         |         11 |          0 |          2 |         13 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/constant/maximalValueIndex.js                | JavaScript         |          2 |          0 |          1 |          3 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/bishop/calculateMoveBishop.js      | JavaScript         |         29 |          0 |          8 |         37 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/calculateMovementPossible.js       | JavaScript         |         10 |          0 |          2 |         12 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/king/calculateKingMove.js          | JavaScript         |         29 |          0 |          5 |         34 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/knight/calculateKnightMove.js      | JavaScript         |         24 |          0 |          6 |         30 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/movementBehavior.js                | JavaScript         |         15 |          0 |          2 |         17 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/pawn/calculateMovePawn.js          | JavaScript         |         12 |          0 |          3 |         15 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/pawn/calculatePawnDiagonalLeft.js  | JavaScript         |         16 |          0 |          3 |         19 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/pawn/calculatePawnDiagonalRight.js | JavaScript         |         16 |          0 |          3 |         19 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/pawn/calculatePawnDoubleJump.js    | JavaScript         |         14 |          0 |          2 |         16 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/pawn/calculatePawnForward.js       | JavaScript         |         12 |          0 |          2 |         14 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/queen/calculateQueenMove.js        | JavaScript         |         27 |          0 |          8 |         35 |
+| /Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/rook/calculatemoveRook.js          | JavaScript         |         29 |          0 |          8 |         37 |
+| Total                                                                                                                            |                    |     16,938 |         22 |        107 |     17,067 |
++----------------------------------------------------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

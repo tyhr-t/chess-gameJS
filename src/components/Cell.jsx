@@ -1,33 +1,34 @@
 import { checkPossibleToMoveHere } from "../utils/cells/checkPossibleToMoveHere"
 import { getOpositeColor } from "../utils/_players/getOpositeColor"
 import { getPieceColor } from "../utils/_players/getPieceColor"
+import { handleSelection } from "../utils/_players/handleSelection"
+import { useContext } from "react"
+import { chessContext } from "./GameContextProvider"
 
-const Cell = ({
-  setCurrentPawn,
-  currentPawn,
-  chessBoard,
-  currentPlayer,
-  setCurrentPlayer,
-  x,
-  possiblesMovements,
-  y,
-  setChessBoard
-}) => {
+const Cell = ({ x, y }) => {
+  const {
+    setCurrentPawn,
+    currentPawn,
+    chessBoard,
+    currentPlayer,
+    setCurrentPlayer,
+    possiblesMovements,
+    setChessBoard
+  } = useContext(chessContext)
   const handleClickCell = () => {
     const clickedCellValue = chessBoard[y][x]
-    const colorOfPiece = getPieceColor(clickedCellValue)
 
-    if (clickedCellValue && currentPlayer === colorOfPiece) {
-      const pawnInfo = {
-        value: clickedCellValue,
-        positionX: x,
-        positionY: y,
-        color: colorOfPiece
-      }
-      setCurrentPawn(pawnInfo)
-    }
+    handleSelection(
+      { positionX: x, positionY: y, value: clickedCellValue },
+      currentPlayer,
+      setCurrentPawn
+    )
 
-    if (currentPawn && !(currentPlayer === getPieceColor(clickedCellValue))) {
+    if (
+      currentPawn &&
+      !(currentPlayer === getPieceColor(clickedCellValue)) &&
+      isPossibleToMoveHere
+    ) {
       setChessBoard((prev) => {
         const newChess = [...prev]
         newChess[currentPawn.positionY][currentPawn.positionX] = ""

@@ -1,4 +1,5 @@
-import directionsIterators from "../../constant/directionsIterators"
+import { directionsIterators } from "../../constant/constant"
+
 import { isInBoard } from "../../cells/isInBoard"
 import { getPieceColor } from "../../_players/getPieceColor"
 import { checkIsEnemy } from "../../cells/checkIsEnnemy"
