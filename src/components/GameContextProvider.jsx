@@ -13,7 +13,6 @@ export const GameContextProvider = ({ children }) => {
   const [possiblesMovements, setPossiblesMovements] = useState([])
   const [hasGameStarted, setHasGameStarted] = useState(false)
   const [piecesCount, setPiecesCount] = useState(null)
-  const [savedStates, setSavedStates] = useState([chessBoard])
 
   useEffect(() => {
     setPiecesCount(getPiecesCount(chessBoard))

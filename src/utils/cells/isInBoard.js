@@ -1,5 +1,10 @@
+import { MAXIMAL_X_VALUE_ON_BOARD, MINIMAL_X_VALUE_ON_BOARD,MINIMAL_Y_VALUE_ON_BOARD,MAXIMAL_Y_VALUE_ON_BOARD} from "../constant/constant"
+
 export const isInBoard = (position) =>
-  position.positionY <= 7 &&
-  position.positionY >= 0 &&
-  position.positionX <= 7 &&
-  position.positionX >= 0
+  position.positionY <= MAXIMAL_Y_VALUE_ON_BOARD &&
+  position.positionY >= MINIMAL_Y_VALUE_ON_BOARD &&
+  position.positionX <= MAXIMAL_X_VALUE_ON_BOARD &&
+  position.positionX >= MINIMAL_X_VALUE_ON_BOARD
+
+
+  

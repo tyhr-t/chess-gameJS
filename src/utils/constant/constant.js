@@ -24,8 +24,10 @@ export const directionsIterators = {
   left: { x: -1, y: 0 }
 }
 
-export const MAXIMAL_X_VALUE_ON_BOARD = 0
+export const MAXIMAL_X_VALUE_ON_BOARD = 7
 export const MAXIMAL_Y_VALUE_ON_BOARD = 7
+export const MINIMAL_X_VALUE_ON_BOARD = 0
+export const MINIMAL_Y_VALUE_ON_BOARD = 0
 
 export const piecesColors = {
   white: "#B37B3C",

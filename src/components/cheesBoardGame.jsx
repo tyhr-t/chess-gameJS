@@ -16,7 +16,7 @@ export const ChessBoard = () => {
         </div>
       ))}
       {hasGameStarted ? (
-        <div className="  flex flex-col ">
+        <div className="flex flex-col   ">
           <div className="text-2xl font-bold">
             {`Current player : ${currentPlayer}`}
           </div>

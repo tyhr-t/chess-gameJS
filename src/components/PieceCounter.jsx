@@ -5,8 +5,6 @@ import { useContext } from "react"
 const PieceCounter = () => {
   const { piecesCount } = useContext(chessContext)
 
-  console.log(piecesCount)
-
   return (
     piecesCount && (
       <div className="flex text-white gap-4 ">
