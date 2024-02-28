@@ -1,0 +1,41 @@
+"filename", "language", "JavaScript JSX", "XML", "JavaScript", "JSON", "HTML", "JSON with Comments", "comment", "blank", "total"
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/.codesandbox/tasks.json", "JSON with Comments", 0, 0, 0, 0, 0, 33, 2, 2, 37
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/.codesandbox/workspace.json", "JSON", 0, 0, 0, 20, 0, 0, 0, 0, 20
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/.eslintrc.json", "JSON with Comments", 0, 0, 0, 0, 0, 224, 1, 1, 226
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/.prettierrc", "JSON", 0, 0, 0, 12, 0, 0, 0, 0, 12
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/_trash/defaultConfigChessBoard.js", "JavaScript", 0, 0, 66, 0, 0, 0, 0, 1, 67
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/_trash/generateBoard.js", "JavaScript", 0, 0, 7, 0, 0, 0, 4, 3, 14
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/_trash/movePawn.js", "JavaScript", 0, 0, 0, 0, 0, 0, 4, 1, 5
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/package-lock.json", "JSON", 0, 0, 0, 16045, 0, 0, 0, 1, 16046
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/package.json", "JSON", 0, 0, 0, 38, 0, 0, 0, 1, 39
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/public/index.html", "HTML", 0, 0, 0, 0, 16, 0, 0, 2, 18
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/_PIECES/pawn.svg", "XML", 0, 1, 0, 0, 0, 0, 0, 0, 1
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/components/App.jsx", "JavaScript JSX", 12, 0, 0, 0, 0, 0, 0, 3, 15
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/components/Cell.jsx", "JavaScript JSX", 50, 0, 0, 0, 0, 0, 0, 6, 56
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/components/cheesBoardGame.jsx", "JavaScript JSX", 47, 0, 0, 0, 0, 0, 0, 4, 51
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/components/ui/Button.jsx", "JavaScript JSX", 9, 0, 0, 0, 0, 0, 0, 3, 12
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/components/ui/Navbar.jsx", "JavaScript JSX", 34, 0, 0, 0, 0, 0, 0, 3, 37
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/index.jsx", "JavaScript JSX", 7, 0, 0, 0, 0, 0, 3, 4, 14
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/_players/getOpositeColor.js", "JavaScript", 0, 0, 6, 0, 0, 0, 0, 2, 8
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/_players/getPieceColor.js", "JavaScript", 0, 0, 9, 0, 0, 0, 0, 3, 12
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/_players/handleSelection.js", "JavaScript", 0, 0, 8, 0, 0, 0, 0, 2, 10
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/cells/checkIsEnnemy.js", "JavaScript", 0, 0, 2, 0, 0, 0, 0, 1, 3
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/cells/checkPossibleToMoveHere.js", "JavaScript", 0, 0, 9, 0, 0, 0, 0, 3, 12
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/cells/isInBoard.js", "JavaScript", 0, 0, 5, 0, 0, 0, 0, 1, 6
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/constant/constant.js", "JavaScript", 0, 0, 22, 0, 0, 0, 8, 4, 34
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/constant/directionKnightIterators.js", "JavaScript", 0, 0, 10, 0, 0, 0, 0, 1, 11
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/constant/directionsIterators.js", "JavaScript", 0, 0, 11, 0, 0, 0, 0, 2, 13
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/constant/maximalValueIndex.js", "JavaScript", 0, 0, 2, 0, 0, 0, 0, 1, 3
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/bishop/calculateMoveBishop.js", "JavaScript", 0, 0, 29, 0, 0, 0, 0, 8, 37
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/calculateMovementPossible.js", "JavaScript", 0, 0, 10, 0, 0, 0, 0, 2, 12
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/king/calculateKingMove.js", "JavaScript", 0, 0, 29, 0, 0, 0, 0, 5, 34
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/knight/calculateKnightMove.js", "JavaScript", 0, 0, 24, 0, 0, 0, 0, 6, 30
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/movementBehavior.js", "JavaScript", 0, 0, 15, 0, 0, 0, 0, 2, 17
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/pawn/calculateMovePawn.js", "JavaScript", 0, 0, 12, 0, 0, 0, 0, 3, 15
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/pawn/calculatePawnDiagonalLeft.js", "JavaScript", 0, 0, 16, 0, 0, 0, 0, 3, 19
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/pawn/calculatePawnDiagonalRight.js", "JavaScript", 0, 0, 16, 0, 0, 0, 0, 3, 19
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/pawn/calculatePawnDoubleJump.js", "JavaScript", 0, 0, 14, 0, 0, 0, 0, 2, 16
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/pawn/calculatePawnForward.js", "JavaScript", 0, 0, 12, 0, 0, 0, 0, 2, 14
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/queen/calculateQueenMove.js", "JavaScript", 0, 0, 27, 0, 0, 0, 0, 8, 35
+"/Users/kreyze/Desktop/Dev/Tidiane.t/Javascript/Avetis/chees-game/'Sandbox/src/utils/movements/rook/calculatemoveRook.js", "JavaScript", 0, 0, 29, 0, 0, 0, 0, 8, 37
+"Total", "-", 159, 1, 390, 16115, 16, 257, 22, 107, 17067

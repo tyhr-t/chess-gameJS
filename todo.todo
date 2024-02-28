@@ -1,0 +1,4 @@
+    -Moves va devoir être modifié dans ce fichier
+  
+    -Modifier chaque fonction pour qu'elles prennent "board" et "direction" en paramètre
+    -Les fonctions doivent dorénavant retourner des positions 

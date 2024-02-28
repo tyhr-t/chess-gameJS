@@ -1,31 +1,34 @@
-import React, { useState } from "react"
-import { generateBoard } from "../utils/generateBoard"
-import { defaultConfigChessBoard } from "../utils/defaultConfigChessBoard"
+import { useContext } from "react"
+import Cell from "./Cell"
+import { chessContext } from "./GameContextProvider"
 
 export const ChessBoard = () => {
-  const [config] = useState(defaultConfigChessBoard)
-  const chessBoard = generateBoard()
+  const { chessBoard, currentPawn, currentPlayer, hasGameStarted } =
+    useContext(chessContext)
 
   return (
     <div>
-      {chessBoard.map((line, lineIndex) => (
-        <div className="flex border" key={lineIndex}>
-          {line.map((square, elementOfLineIndex) => {
-            const lineIsPair = lineIndex % 2 === 0
-            const offset = lineIsPair ? 0 : 1
-            const isPair = (elementOfLineIndex + offset) % 2 === 0
-
-            return (
-              <div
-                className={`w-20 h-20 bg-${isPair ? "" : ""}`}
-                style={{ backgroundColor: isPair ? "#616198" : "" }}
-                key={`${square}-${lineIndex}`}>
-                {config[square]}
-              </div>
-            )
-          })}
+      {chessBoard.map((line, y) => (
+        <div className="flex border" key={y}>
+          {line.map((square, x) => (
+            <Cell key={`${x}-${y}`} x={x} y={y} />
+          ))}
         </div>
       ))}
+      {hasGameStarted ? (
+        <div className="flex flex-col   ">
+          <div className="text-2xl font-bold">
+            {`Current player : ${currentPlayer}`}
+          </div>
+          <div className="text-2xl font-bold">
+            {currentPawn
+              ? `Current pawn : ${currentPawn?.color} ${currentPawn?.value}`
+              : "No pawn selected"}
+          </div>
+        </div>
+      ) : (
+        <div className="text-2xl font-bold">{`Start the game`}</div>
+      )}
     </div>
   )
 }

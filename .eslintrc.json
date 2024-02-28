@@ -43,7 +43,7 @@
       }
     ],
     "capitalized-comments": [
-      "warn",
+      "error",
       "always",
       { "ignoreConsecutiveComments": true }
     ],
@@ -82,7 +82,7 @@
     "no-alert": "error",
     "no-bitwise": "error",
     "no-caller": "error",
-    "no-console": "warn",
+    "no-console": "error",
     "no-else-return": "error",
     "no-empty-function": "error",
     "no-empty-static-block": "error",
@@ -93,7 +93,7 @@
     "no-implicit-coercion": "error",
     "no-implicit-globals": "error",
     "no-implied-eval": "error",
-    "no-inline-comments": "warn",
+    "no-inline-comments": "error",
     "no-invalid-this": "error",
     "no-iterator": "error",
     "no-labels": "error",

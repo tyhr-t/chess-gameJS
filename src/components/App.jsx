@@ -1,11 +1,17 @@
 import { ChessBoard } from "./cheesBoardGame"
+import Navbar from "./ui/Navbar"
+import { GameContextProvider } from "./GameContextProvider"
 
 const App = () => (
-  <div>
-    <div className="h-screen flex justify-center text-center">
-      <ChessBoard />
+  <GameContextProvider>
+    <div className="h-screen bg-gradient-to-r from-gray-100 to-gray-300">
+      <Navbar />
+      <div className="h-screen flex flex-col  items-center">
+        <ChessBoard />
+        <div className="footer">Footer</div>
+      </div>
     </div>
-  </div>
+  </GameContextProvider>
 )
 
 export default App
